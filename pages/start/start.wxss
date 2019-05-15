@@ -1,0 +1,114 @@
+.start{
+  overflow: hidden;
+  background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556367116&di=5744b09a509d71e06ef2e7c84c085765&imgtype=jpg&er=1&src=http%3A%2F%2Fd-paper.i4.cn%2Fmax%2F2017%2F03%2F01%2F11%2F1488339058602_522498.jpg);
+  background-size: cover;
+  position: relative;
+}
+.start-text{
+  /* font-size: 50rpx; */
+  font-weight: bold;
+  color: 	#E6E6FA;
+  position: relative;
+  animation: jeepText 1.5s linear forwards;
+  /* animation-name: jeepText;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; */
+}
+@keyframes jeepText{
+  0%{font-size: 0rpx;top: 0;left: 0rpx;}
+  40%{font-size: 80rpx;top: 30%;left: 0rpx;}
+  65%{font-size: 50rpx;top: 50rpx;left: 0rpx;}
+  70%{font-size: 50rpx;top: 50rpx;left: -30rpx;}
+  75%{font-size: 50rpx;top: 50rpx;left: 30rpx;}
+  80%{font-size: 50rpx;top: 50rpx;left: -30rpx;}
+  85%{font-size: 50rpx;top: 50rpx;left: 30rpx;}
+  90%{font-size: 50rpx;top: 50rpx;left: -30rpx;}
+  95%{font-size: 50rpx;top: 50rpx;left: 30rpx;}
+  100%{font-size: 50rpx;top: 50rpx;left: 0;}
+}
+.button-contain{
+  /* display: none; */
+  width: 70%;
+  height: 30%;
+  border-radius: 5%;
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  bottom: -30%;
+  animation: jeepContain 0.5s linear 1.5s forwards;
+  /* animation-name: jeepContain;
+  animation-delay: 1.5s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; */
+}
+.obout-us{
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.obout-us icon{
+  font-size: 1.1em;
+  position: absolute;
+  top: 10rpx;
+  right: 30rpx;
+  color: gray;
+}
+@keyframes jeepContain{
+  0%{opacity: 0;bottom: -30%;}
+  70%{opacity: 0.8;bottom: 40%;}
+  100%{opacity: 1;bottom: 30%;}
+}
+.button-contain button{
+  width: 80%;
+  font-size: 40rpx;
+  background: #F5F5DC;
+  background-size: cover;
+  opacity: 0;
+  animation: showButton 0.5s linear 2s forwards;
+}
+@keyframes showButton{
+  from{opacity: 0;transform: scale(0)}
+  to{opacity: 1;transform: scale(1)}
+}
+.button-contain text{
+  /* color: #F0F0F0; */
+  position: absolute;
+  bottom: 10%;
+  opacity: 0;
+  text-decoration: underline;
+  animation: showText 0.5s linear 2.5s forwards;
+}
+@keyframes showText{
+  from{opacity: 0;transform: scale(0);}
+  to{opacity: 1;transform: scale(1);}
+}
+@keyframes hiddenButton{
+  from{opacity: 1;transform: scale(1);}
+  to{opacity: 0;transform: scale(0);}
+}
+@keyframes hiddenText{
+  from{opacity: 1;transform: scale(1);}
+  to{opacity: 0;transform: scale(0);}
+}
+@keyframes pullButtonContain{
+  from{height: 30%;background: rgba(255,255,255,0.7);}
+  to{height: 50%;background: rgba(255,255,255,0.8);}
+}
+@keyframes showAbout{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+@keyframes hiddenContain{
+  from{opacity: 1}
+  to{opacity: 0}
+}

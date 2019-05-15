@@ -1,0 +1,18 @@
+<!--logs.wxml-->
+<view class='container start'>
+    <text class='start-text'>智能实验室为您服务</text>
+    <view class='button-contain' style='{{ buttonContaiStyle }}'>
+      <button style='{{ buttonStyle }}' bindtap='toLaboratory'>进入实验室</button>
+      <text bindtap='aboutUs' style='{{ textStyle }}'>关于我们</text>
+      <view class='obout-us' style='{{ aboutUsStyle }}'>
+        <icon bindtap='closeAbout'>返回</icon>
+        <rich-text style='font-weight:bold;font-size:1.5em;margin-top:50rpx'>关于我们</rich-text>
+        <rich-text>负责人：邹闰闰</rich-text>
+        <rich-text>技术：王少华 胡伟 乔瑜磊</rich-text>
+        <rich-text>UI：王可欣</rich-text>
+        <rich-text>市场：邹闰闰</rich-text>
+        <rich-text>联系我们：376220459@qq.com</rich-text>
+        <rich-text style='color:gray;font-size:0.6em;'>西安邮电大学 2019.04</rich-text>
+      </view>
+    </view>
+</view>

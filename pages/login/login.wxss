@@ -1,0 +1,66 @@
+.login-text-container{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 200rpx;
+  left: 60rpx;
+  height: 70rpx;
+  width: 140rpx;
+  border-bottom: 20rpx solid #5bb8f3;
+}
+.login-text{
+  position: relative;
+  z-index: 1;
+  top: 10rpx;
+  font-size: 50rpx;
+  /* font-weight: bold; */
+}
+.register-tip{
+  position: absolute;
+  top: 300rpx;
+  left: 60rpx;
+  /* font-weight: bold; */
+  font-size: 29rpx;
+}
+.register-navigator{
+  display: inline;
+  color: #5bb8f3;
+}
+.input-container{
+  width: 100%;
+  position: absolute;
+  top: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input{
+  padding: 0 0 15rpx 80rpx;
+  font-size: 29rpx;
+  width: 70%;
+  border-bottom: 4rpx solid #d1cfc6;
+}
+.input-password{
+  margin-top: 106rpx;
+}
+.button-container{
+  width: 100%;
+  position: absolute;
+  top: 824rpx;
+}
+.button{
+  width: 80%;
+  height: 100rpx;
+  border-radius: 50rpx;
+  /* font-weight: bold; */
+  font-size: 40rpx;
+}
+.button-login{
+  border: 1rpx solid #5bb8f3;
+  background-color: transparent;
+}
+.button-esay-login{
+  margin-top: 36rpx;
+  background-color: #5bb8f3;
+}
