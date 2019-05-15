@@ -1,3 +1,18 @@
-<view class='container register'>
-
+<view class='container'>
+  <image bindtap='goBack' src='http://i2.tiimg.com/684412/0b19c14e705726f1.png' class='back-button'></image>
+  <view class='register-text-container'>
+    <rich-text class='register-text'>注册</rich-text>
+  </view>
+  <form>
+    <input placeholder='请输入您的姓名' class='input' focus='true'></input>
+    <input placeholder='请输入您的学号' class='input'></input>
+    <input placeholder='请输入您的手机号' class='input'></input>
+    <view class='check-container'>
+      <input placeholder='请输入验证码' class='input'></input>
+      <rich-text class='check-code'>发送验证码</rich-text>
+    </view>
+    <input type='password' placeholder='密码（6-16位，必须包含英文字符）' class='input'></input>
+    <input type='password' placeholder='请确认您的密码' class='input'></input>
+    <button form-type='submit' class='register-button'>注册</button>
+  </form>
 </view>

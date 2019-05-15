@@ -2,13 +2,13 @@
     <view class='login-text-container'>
       <rich-text class='login-text'>登录</rich-text>
     </view>
-    <rich-text class='register-tip'>还没有账号，立即<navigator class='register-navigator' url='../register/register'>注册</navigator></rich-text>
-    <view class='input-container'>
-      <input placeholder='请输入您的学号' class='input' focus='true'></input>
-      <input placeholder='请输入您的密码' password='true' class='input input-password'></input>
-    </view>
+    <rich-text class='register-tip'>还没有账号，立即 <navigator class='register-navigator' url='../register/register'>注册</navigator></rich-text>
+    <form class='input-container'>
+      <input placeholder='请输入您的学号' focus='true'></input>
+      <input placeholder='请输入您的密码' password='true' class='input-password'></input>
+    </form>
     <view class='button-container'>
-      <button class='button button-login'>登陆</button>
-      <button class='button button-esay-login'>一键登陆</button>
+      <button class='button-login'>登陆</button>
+      <button class='button-esay-login'>一键登陆</button>
     </view>
 </view>

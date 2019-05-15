@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/login/login",
+    "pages/classes/classes",
     "pages/start/start",
+    "pages/login/login",
     "pages/register/register",
     "pages/index/index",
     "pages/logs/logs"
@@ -10,6 +11,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom"
   }
 }

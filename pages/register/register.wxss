@@ -1,2 +1,56 @@
-.register{
+.back-button{
+  width: 49rpx;
+  height: 37rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 107rpx;
+}
+.register-text-container{
+  box-sizing: border-box;
+  height: 70rpx;
+  width: 140rpx;
+  border-bottom: 20rpx solid #5bb8f3;
+  position: absolute;
+  top: 230rpx;
+  left: 60rpx;
+  text-align: center;
+}
+.register-text{
+  position: relative;
+  top: 5rpx;
+  font-size: 50rpx;
+}
+form{
+  width: 600rpx;
+  position: absolute;
+  top:404rpx;
+  left: 60rpx;
+}
+input{
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 3rpx solid #d1cfc6;
+  margin-bottom: 70rpx;
+  padding: 0 0 10rpx 80rpx;
+  font-size: 29rpx;
+}
+.check-container{
+  position: relative;
+  box-sizing: border-box;
+}
+.check-code{
+  position: absolute;
+  z-index: 20;
+  right: 20rpx;
+  bottom: 10rpx;
+  font-size: 29rpx;
+  color: #5bb8f3;
+}
+.register-button{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+  margin: 85rpx auto 0 auto;
+  background-color: #5bb8f3;
+  font-size: 40rpx;
 }
