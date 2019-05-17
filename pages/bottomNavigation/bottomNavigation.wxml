@@ -1,0 +1,21 @@
+<view class='bottom-navigation'>
+  <view class='bottom-home'>
+    <image src='{{ iconArr[0].img }}'></image>
+    <view style='color: {{ iconArr[0].color }}'>首页</view>
+  </view>
+  <view class='bottom-equipment'>
+    <image src='{{ iconArr[1].img }}'></image>
+    <view style='color: {{ iconArr[1].color }}'>器材</view>
+  </view>
+
+  <image src='http://i1.fuimg.com/684412/44edf4de397d9047.png' class='bottom-add'></image>
+
+  <view class='bottom-test'>
+    <image src='{{ iconArr[2].img }}'></image>
+    <view style='color: {{ iconArr[2].color }}'>测评</view>
+  </view>
+  <view class='bottom-mine'>
+    <image src='{{ iconArr[3].img }}'></image>
+    <view style='color: {{ iconArr[3].color }}'>我的</view>
+  </view>
+</view>
