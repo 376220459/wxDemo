@@ -1,0 +1,22 @@
+<view class='container'>
+  <image src='http://i1.fuimg.com/684412/dd8e9d95742d80ab.png' class='back-img'></image>
+  <view class='select-week' bindtap='changeWeekList'>第{{ currentWeek }}周 <image src='{{ weekListPoint }}'></image></view>
+  <scroll-view class='week-list' scroll-y='true' hidden='{{ hiddenWeekList }}'>
+    <view wx:for='{{ weeks }}' wx:key='index' bindtap='selectWeek' data-item='{{ item }}'>第{{ item }}周</view>
+  </scroll-view>
+  <view class='select-term'>大三 第2学期</view>
+  <scroll-view class='class-list' scroll-y='true'>
+    <view class='class-container' wx:for = '{{ classes }}' wx:key='index'>
+      <image class='class-img' src='{{ item.img }}'></image>
+      <view class='class-inf'>
+        <view class='inf-subject'>{{ item.subject }}</view>
+        <view class='inf-title'>{{ item.title }}</view>
+        <view class='inf-time'><image src='http://i1.fuimg.com/684412/ec219b15ebdf2660.png'></image>{{ item.time }}</view>
+        <view class='inf-place'><image src='http://i1.fuimg.com/684412/b7b17bf1c3ac0e21.png'></image>{{ item.place }}</view>
+        <button class='inf-button'>开始上课</button>
+      </view>
+    </view>
+    <view class='bottom-tip'>————— 今天暂时没有更多课程了 —————</view>
+  </scroll-view>
+  <bottom-navigation iconArr='{{iconArr}}'></bottom-navigation>
+</view>

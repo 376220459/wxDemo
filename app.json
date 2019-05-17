@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/classes/classes",
+    "pages/subjects/subjects",
     "pages/bottomNavigation/bottomNavigation",
     "pages/start/start",
     "pages/login/login",
