@@ -1,0 +1,50 @@
+<view class='container'>
+  <view class='top'>
+    <image src='http://i2.tiimg.com/684412/fef8b025c0d453ab.png'></image>
+    <rich-text>{{ subjectName }}</rich-text>
+  </view>
+  <view class='tab'>
+    <view style='color: {{ tabStyleArr[0].color }};border-bottom: {{ tabStyleArr[0].borderBottom }}' bindtap='changeTab' data-index='0'>签到</view>
+    <view style='color: {{ tabStyleArr[1].color }};border-bottom: {{ tabStyleArr[1].borderBottom }}' bindtap='changeTab' data-index='1'>课程</view>
+    <view style='color: {{ tabStyleArr[2].color }};border-bottom: {{ tabStyleArr[2].borderBottom }}' bindtap='changeTab' data-index='2'>提交</view>
+  </view>
+
+  <view class='tab-sign-in' wx:if='{{ tabIfArr[0] }}'>
+  a
+  </view>
+
+  <scroll-view scroll-y='true' class='tab-content tab-subject' wx:if='{{ tabIfArr[1] }}'>
+    <video src='' custom-cache="{{false}}">
+    <!-- https://cqzx002.oss-cn-shanghai.aliyuncs.com/user-dir-prefix/38adarykme.mp4 -->
+    </video>
+    <view class='experimental-data-container'>
+      <view class='data-title'>实验资料</view>
+      <scroll-view class='data-content-container' scroll-y='true'>
+        <view wx:for='{{ experimentalDataArr }}' wx:key='{{ index }}' class='data'>
+          <image src='{{ experimentalDataIconArr[index] }}'></image>
+          <view>
+            <view class='data-name'>{{ item.name }}</view>
+            <view class='data-size'>{{ item.size }}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </scroll-view>
+
+  <scroll-view scroll-y='true' class='tab-content tab-submit' wx:if='{{ tabIfArr[2] }}'>
+    <view wx:for='{{ steps }}' wx:key='index' class='step-container'>
+      <view class='step-index'>步骤{{ index + 1 }}</view>
+      <view class='step-whole'>
+        <view class='step-title'>{{ item.title }}</view>
+        <view class='step-content'>{{ item.content }}</view>
+        <view class='step-imgs-container'>
+          <view class='step-img'><image wx:for='{{ item.imgsArr }}' wx:for-item='item2' wx:key='{{ index }}' src='{{ item2 }}'></image></view>
+        </view>
+      </view>
+    </view>
+    <view class='add-step'>
+      <image src='http://i1.fuimg.com/684412/d02ae37508aebdf4.png'></image>
+      <view>添加新步骤</view>
+    </view>
+  </scroll-view>
+</view>

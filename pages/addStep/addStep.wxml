@@ -1,0 +1,18 @@
+<view class='container'>
+  <view class='top'>
+    <image src='http://i1.fuimg.com/684412/dd4c4c06be36d8e3.png'></image>
+    <rich-text>实验步骤 {{ stepIndex }}</rich-text>
+  </view>
+  <view class='submit'>提交</view>
+  <form>
+    <input class='step-title' placeholder='请输入标题' maxlength='20' focus='true'></input>
+    <textarea class='step-content' placeholder='请输入内容' maxlength='1000'></textarea>
+  </form>
+  <view class='step-imgs'>
+    <view class='img' wx:for='{{ imgsArr }}' wx:key='{{ index }}'>
+      <image src='{{ item }}'></image>
+      <image class='delete-img' src='http://i2.tiimg.com/684412/a90cfa5bfef27feb.png' data-index='{{ index }}' bindtap='deleteImg'></image>
+    </view>
+    <view class='add'><image src='http://i1.fuimg.com/684412/2d57abb2cbb551a5.png'></image></view>
+  </view>
+</view>

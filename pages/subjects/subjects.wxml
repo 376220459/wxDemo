@@ -6,7 +6,7 @@
   </scroll-view>
   <view class='select-term'>大三 第2学期</view>
   <scroll-view class='class-list' scroll-y='true'>
-    <view class='class-container' wx:for = '{{ classes }}' wx:key='index'>
+    <view class='class-container' wx:for = '{{ classes }}' wx:key='{{ index }}'>
       <image class='class-img' src='{{ item.img }}'></image>
       <view class='class-inf'>
         <view class='inf-subject'>{{ item.subject }}</view>
