@@ -23,6 +23,12 @@
   position: absolute;
   left: 54rpx;
 }
+.top rich-text{
+  width: 50%;
+  white-space: nowrap;
+  overflow: auto;
+  text-align: center;
+}
 .tab{
   box-sizing: border-box;
   height: 60rpx;

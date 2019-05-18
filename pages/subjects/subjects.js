@@ -11,23 +11,23 @@ Page({
     weekListPoint: 'http://i2.tiimg.com/684412/e854ac75dd2fe588.png',
     classes: [
       {
-        img: 'http://img4.imgtn.bdimg.com/it/u=484763539,264346239&fm=26&gp=0.jpg',
+        img: 'http://i1.fuimg.com/684412/507594339af35479.png',
         subject: '大学有机化学实验',
-        title: '--磺基水杨酸合铁组成',
+        name: '--磺基水杨酸合铁组成',
         time: '8:00-10:15',
         place: '东区 ff106'
       },
       {
-        img: 'http://img4.imgtn.bdimg.com/it/u=3331419931,2711731069&fm=26&gp=0.jpg',
+        img: 'http://i1.fuimg.com/684412/baf0d071d24e4bc4.png',
         subject: '数字电路与逻辑设计',
-        title: '--数字系统设计',
+        name: '--数字系统设计',
         time: '12:10-14:15',
         place: '东区 ff106'
       },
       {
-        img: 'http://p11.qhimg.com/t01ec15006b2e767e92.jpg',
+        img: 'http://i1.fuimg.com/684412/baf0d071d24e4bc4.png',
         subject: '数字电路与逻辑设计',
-        title: '--示波器使用简介',
+        name: '--示波器使用简介',
         time: '18:10-19:50',
         place: '西区 b122'
       }
@@ -69,6 +69,12 @@ Page({
       currentWeek: e.target.dataset.item
     });
     this.changeWeekList();
+  },
+  goExperimental(e){
+    let name = e.currentTarget.dataset.name.slice(2);
+    wx.reLaunch({
+      url: '../experimental/experimental?name=' + name
+    })
   },
 
   /**

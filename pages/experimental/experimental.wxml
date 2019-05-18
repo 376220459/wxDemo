@@ -1,6 +1,6 @@
 <view class='container'>
   <view class='top'>
-    <image src='http://i2.tiimg.com/684412/fef8b025c0d453ab.png'></image>
+    <image src='http://i2.tiimg.com/684412/fef8b025c0d453ab.png' bindtap='goSubjects'></image>
     <rich-text>{{ subjectName }}</rich-text>
   </view>
   <view class='tab'>
@@ -9,9 +9,9 @@
     <view style='color: {{ tabStyleArr[2].color }};border-bottom: {{ tabStyleArr[2].borderBottom }}' bindtap='changeTab' data-index='2'>提交</view>
   </view>
 
-  <view class='tab-sign-in' wx:if='{{ tabIfArr[0] }}'>
+  <scroll-view scroll-y='true' class='tab-sign-in' wx:if='{{ tabIfArr[0] }}'>
   a
-  </view>
+  </scroll-view>
 
   <scroll-view scroll-y='true' class='tab-content tab-subject' wx:if='{{ tabIfArr[1] }}'>
     <video src='' custom-cache="{{false}}">
@@ -38,11 +38,11 @@
         <view class='step-title'>{{ item.title }}</view>
         <view class='step-content'>{{ item.content }}</view>
         <view class='step-imgs-container'>
-          <view class='step-img'><image wx:for='{{ item.imgsArr }}' wx:for-item='item2' wx:key='{{ index }}' src='{{ item2 }}'></image></view>
+          <view class='step-img'><image wx:for='{{ item.imgsArr }}' wx:for-item='item2' wx:key='{{ index }}' src='{{ item2 }}' bindtap='showImg' data-imgs-arr='{{ item.imgsArr }}' data-index='{{ index }}'></image></view>
         </view>
       </view>
     </view>
-    <view class='add-step'>
+    <view class='add-step' bindtap='addStep' data-step-index='{{ steps.length }}'>
       <image src='http://i1.fuimg.com/684412/d02ae37508aebdf4.png'></image>
       <view>添加新步骤</view>
     </view>

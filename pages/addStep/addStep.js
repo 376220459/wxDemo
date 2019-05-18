@@ -4,18 +4,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    stepIndex: 1,
-    imgsArr: [
-      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1547935979,1542028289&fm=26&gp=0.jpg',
-      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3292198213,1397448381&fm=26&gp=0.jpg',
-      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558119856017&di=1192a501a1d4082d536b87fc5156675c&imgtype=0&src=http%3A%2F%2Fdpic.tiankong.com%2Fvg%2F6u%2FQJ6308401145.jpg',
-      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1681705618,469637139&fm=26&gp=0.jpg'
-    ]
+    subjectName: '',
+    stepIndex: 0,
+    uploadedImgList: []
   },
+  goBack() {
+    wx.navigateBack()
+  }, 
   deleteImg(e){
     let imgIndex = e.currentTarget.dataset.index;
     this.setData({
-      imgsArr: this.data.imgsArr.filter((item, index) => index != imgIndex)
+      uploadedImgList: this.data.uploadedImgList.filter((item, index) => index != imgIndex)
+    })
+  },
+  uploadImg(e){
+    if (this.data.uploadedImgList.length === 9){
+      console.log('最多只能上传 9 张照片哦.')
+      return;
+    }
+    var that = this;
+    wx.chooseImage({
+      count: 9 - that.data.uploadedImgList.length, // 一次性最多可选照片数量
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // console.log(res)
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        let tempFilePaths = res.tempFilePaths;//此处是一个数组，下边需用concat拼接数组
+        let uploadedImgList = that.data.uploadedImgList.concat(tempFilePaths);
+        that.setData({
+          uploadedImgList: uploadedImgList
+        })
+      }
+    })
+  },
+  showImg(e){
+    wx.previewImage({
+      urls: this.data.uploadedImgList,
+      current: this.data.uploadedImgList[e.currentTarget.dataset.index]
+    })
+  },
+  submit(){
+    wx.reLaunch({
+      url: '../experimental/experimental?name=' + this.data.subjectName + '&from=addStep'
     })
   },
 
@@ -23,7 +54,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      subjectName: options.subjectName,
+      stepIndex: Number(options.stepIndex) + 1
+    })
   },
 
   /**

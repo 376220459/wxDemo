@@ -10,10 +10,10 @@
       <image class='class-img' src='{{ item.img }}'></image>
       <view class='class-inf'>
         <view class='inf-subject'>{{ item.subject }}</view>
-        <view class='inf-title'>{{ item.title }}</view>
+        <view class='inf-title'>{{ item.name }}</view>
         <view class='inf-time'><image src='http://i1.fuimg.com/684412/ec219b15ebdf2660.png'></image>{{ item.time }}</view>
         <view class='inf-place'><image src='http://i1.fuimg.com/684412/b7b17bf1c3ac0e21.png'></image>{{ item.place }}</view>
-        <button class='inf-button'>开始上课</button>
+        <button class='inf-button' bindtap='goExperimental' data-name='{{ item.name }}'>开始上课</button>
       </view>
     </view>
     <view class='bottom-tip'>————— 今天暂时没有更多课程了 —————</view>

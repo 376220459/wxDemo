@@ -4,14 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    subjectName: '磺基水杨酸合铁组成',
-    tabStyleArr: [,,
+    subjectName: '',
+    tabStyleArr: [
       {
         color: '#5bb8f3',
         borderBottom: '5rpx solid #5bb8f3'
       }
     ],
-    tabIfArr: [false, false,true],
+    tabIfArr: [true,false, false],
     experimentalDataArr: [
       {
         name: '磺基水杨酸合铁测定实例.docx',
@@ -93,14 +93,15 @@ Page({
         imgsArr: [
           'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1547935979,1542028289&fm=26&gp=0.jpg',
           'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3292198213,1397448381&fm=26&gp=0.jpg',
-          'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558119856017&di=1192a501a1d4082d536b87fc5156675c&imgtype=0&src=http%3A%2F%2Fdpic.tiankong.com%2Fvg%2F6u%2FQJ6308401145.jpg',
           'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1681705618,469637139&fm=26&gp=0.jpg'
         ]
       }
     ]
   },
-  a(){
-    console.log(5)
+  goSubjects() {
+    wx.reLaunch({
+      url: '../subjects/subjects',
+    })
   },
   changeTab(e){
     let index = Number(e.currentTarget.dataset.index);
@@ -152,13 +153,38 @@ Page({
       default: break;
     }
   },
+  addStep(e){
+    let stepIndex = e.currentTarget.dataset.stepIndex;
+    wx.navigateTo({
+      url: '../addStep/addStep?stepIndex=' + stepIndex + '&subjectName=' + this.data.subjectName,
+    })
+  },
+  showImg(e) {
+    wx.previewImage({
+      urls: e.currentTarget.dataset.imgsArr,
+      current: e.currentTarget.dataset.imgsArr[e.currentTarget.dataset.index]
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(this.data.experimentalDataArr)
-
+    // console.log(options)
+    this.setData({
+      subjectName: options.name
+    });
+    if (options.from === 'addStep') {
+      this.setData({
+        tabStyleArr: [, ,
+          {
+            color: '#5bb8f3',
+            borderBottom: '5rpx solid #5bb8f3'
+          }
+        ],
+        tabIfArr: [false, false, true]
+      });
+    }
   },
 
   /**

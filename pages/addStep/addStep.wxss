@@ -35,6 +35,7 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .step-title{
   box-sizing: border-box;
@@ -50,6 +51,13 @@ form{
   height: 50vh;
   padding-left: 26rpx;
   font-size: 32rpx;
+}
+.step-imgs-num{
+  position: absolute;
+  bottom: 0;
+  right: 10rpx;
+  font-size: 25rpx;
+  color: #cbcbcb;
 }
 .step-imgs{
   box-sizing: border-box;
