@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='top'>
+    <rich-text>选课预约</rich-text>
+  </view>
+  <scroll-view class='body' scroll-y='true'>
+    <view class='timetable'>
+      <view class='column' wx:for='{{ timetable }}' wx:key='{{ index }}'>
+        <view class='column-week'>
+          <rich-text style='font-size:24rpx'>{{ item[0][0] }}</rich-text>
+          <rich-text>{{ item[0][1] }}</rich-text>
+        </view>
+        <view class='column-time' wx:for='{{ item[1] }}' wx:for-item='item2' wx:key='{{ index }}'>
+          <rich-text>{{ item2[0] }}</rich-text>
+          <rich-text>-</rich-text>
+          <rich-text>{{ item2[1] }}</rich-text>
+          <image src='http://i2.tiimg.com/684412/dd0bf767c9c1c6aa.png' class='mark' wx:if='{{ item2[0]&&item2[2] }}'></image>
+          <image src='http://i2.tiimg.com/684412/2a0d8cc813d27fa7.png' class='mark' wx:if='{{ item2[0]&&!item2[2] }}'></image>
+        </view>
+      </view>
+      <view class='tip'>
+          <image src='http://i2.tiimg.com/684412/dd0bf767c9c1c6aa.png'></image>实验课程
+          <image src='http://i2.tiimg.com/684412/2a0d8cc813d27fa7.png'></image>自习预约
+      </view>
+    </view>
+    <view class='select-buttons'>
+      <view class='experimental-button'>实验选课</view>
+      <view class='study-button'>自习预约</view>
+    </view>
+  </scroll-view>
+  <bottom-navigation iconArr='{{iconArr}}'></bottom-navigation>
+</view>

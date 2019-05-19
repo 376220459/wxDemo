@@ -6,6 +6,16 @@ Page({
   data: {
     
   },
+  login(){
+    wx.reLaunch({
+      url: '../subjects/subjects',
+    })
+  },
+  easyLogin(){
+    wx.reLaunch({
+      url: '../subjects/subjects',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

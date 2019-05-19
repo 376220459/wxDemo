@@ -8,7 +8,7 @@
       <input placeholder='请输入您的密码' password='true' class='input-password'></input>
     </form>
     <view class='button-container'>
-      <button class='button-login'>登陆</button>
-      <button class='button-esay-login'>一键登陆</button>
+      <button class='button-login' bindtap='login'>登陆</button>
+      <button class='button-esay-login' bindtap='easyLogin'>一键登陆</button>
     </view>
 </view>

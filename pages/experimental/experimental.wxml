@@ -9,8 +9,26 @@
     <view style='color: {{ tabStyleArr[2].color }};border-bottom: {{ tabStyleArr[2].borderBottom }}' bindtap='changeTab' data-index='2'>提交</view>
   </view>
 
-  <scroll-view scroll-y='true' class='tab-sign-in' wx:if='{{ tabIfArr[0] }}'>
-  a
+  <scroll-view scroll-y='true' class='tab-content tab-sign-in' wx:if='{{ tabIfArr[0] }}'>
+    <view class='map'>
+      <rich-text class='sign-in-tip' style='color:{{ signInToast.color }}'>{{ signInToast.toast }}</rich-text>
+      <image src='http://i2.tiimg.com/684412/6d898e2b8d9e858a.png' bindtap='getCurrentLocation'></image>
+      <map id='map' longitude='{{ myLongitude }}' scale='{{ scale }}' latitude='{{ myLatitude }}' markers="{{markers}}" show-location='true' circles='{{ signInRange }}'></map>
+    </view>
+    <view class='sign-in-inf'>
+      <view class='sign-in-inf-time'>
+        <image src='http://i1.fuimg.com/684412/ec219b15ebdf2660.png'></image>
+        {{ signInTime }}
+      </view>
+      <view class='sign-in-inf-place'>
+        <image src='http://i1.fuimg.com/684412/b7b17bf1c3ac0e21.png'></image>
+        {{ signInPlace }}
+      </view>
+    </view>
+    <view class='sign-in-buttons'>
+      <button class='sign-in-start' wx:if='{{ signInButtonIf }}' bindtap='signIn'>开始签到</button>
+      <button class='sign-in-finished' wx:if='{{ !signInButtonIf }}'>已签到</button>
+    </view>
   </scroll-view>
 
   <scroll-view scroll-y='true' class='tab-content tab-subject' wx:if='{{ tabIfArr[1] }}'>

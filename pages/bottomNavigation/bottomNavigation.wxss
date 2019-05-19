@@ -1,6 +1,8 @@
 .bottom-navigation{
+  box-sizing: border-box;
   width: 100%;
   height: 111rpx;
+  border-top: 0.5rpx solid #cbcbcb;
   background: white;
   position: absolute;
   bottom: 0;

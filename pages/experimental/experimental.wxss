@@ -1,6 +1,3 @@
-.container{
-  background: #f5f5f5;
-}
 .top{
   box-sizing: border-box;
   height: 146rpx;
@@ -52,10 +49,12 @@
   padding: 0 15rpx;
 }
 .tab-content{
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  background: #f5f5f5;
+  /* display: flex;
+  flex-direction: column; */
   /* align-items: center; */
   padding-top: 206rpx;
   overflow: auto;
@@ -69,6 +68,74 @@
   padding-top: 206rpx;
   overflow: auto;
 } */
+.tab-sign-in{
+  padding: 30rpx;
+  padding-top: 236rpx;
+}
+.map{
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 590rpx;
+  border: 0.5rpx solid rgba(255, 0, 0, 0.226);
+  border-radius: 10rpx;
+  position: relative;
+  padding: 5rpx;
+  margin: 0 auto;
+}
+.map .sign-in-tip{
+  position: absolute;
+  bottom: -50rpx;
+  left: 30rpx;
+  font-size: 22rpx;
+}
+.map image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: -80rpx;
+  right: 30rpx;
+  z-index: 2;
+}
+.map map{
+  width: 100%;
+  height: 100%;
+}
+.sign-in-inf{
+  width: 690rpx;
+  margin: 74rpx auto 111rpx auto;
+}
+.sign-in-inf view{
+  height: 28rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 42rpx;
+  margin-bottom: 19rpx;
+  font-size: 22rpx;
+}
+.sign-in-inf image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 13rpx;
+}
+.sign-in-inf-time{
+  color: #ff7c3b;
+}
+.sign-in-inf-place{
+  color: #5bb8f3;
+}
+.sign-in-buttons button{
+  width: 600rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.sign-in-start{
+  background: #5bb8f3;
+  color: white;
+}
+.sign-in-finished{
+  background: #e6e6e6;
+  color: #bfbfbf;
+}
 .tab-subject video{
     width: 100%;
     height: 425rpx;
