@@ -20,8 +20,8 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.5",
-	"appid": "wxb9fad0f115255ba1",
+	"libVersion": "2.7.0",
+	"appid": "wx3ddaaaa35db25fa3",
 	"projectname": "Demo",
 	"debugOptions": {
 		"hidedInDevtools": []
