@@ -1,0 +1,10 @@
+<view class='select'>
+  <view class='data' bindtap='changeList'>
+    <view>{{ data }}</view>
+    <image src='http://i2.tiimg.com/684412/87ff74d2cc07a54a.png' wx:if='{{ !showList }}'></image>
+    <image src='http://i2.tiimg.com/684412/fe0df5f886f3a8ca.png' wx:if='{{ showList }}'></image>
+  </view>
+  <scroll-view scroll-y='true' class='list' wx:if='{{ showList }}'>
+    <view wx:for='{{ dataArr }}' wx:key='{{ index }}' bindtap='selectData' data-data='{{ item }}'>{{ item }}</view>
+  </scroll-view>
+</view>

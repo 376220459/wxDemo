@@ -1,0 +1,139 @@
+.top{
+  box-sizing: border-box;
+  height: 146rpx;
+  width: 100%;
+  background: #5bb8f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40rpx;
+  font-size: 36rpx;
+  color: white;
+}
+.top image{
+  height: 44rpx;
+  width: 44rpx;
+  position: absolute;
+  left: 54rpx;
+  z-index: 2;
+}
+.search{
+  box-sizing: border-box;
+  height: 247rpx;
+  width: 100%;
+  padding: 40rpx 40rpx 49rpx 40rpx;
+}
+.search .input{
+  box-sizing: border-box;
+  height: 65rpx;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search input{
+  box-sizing: border-box;
+  height: 65rpx;
+  width: 100%;
+  border: 1rpx solid #9c9c9c;
+  border-radius: 32.5rpx;
+  padding: 0 145rpx 0 79rpx;
+  font-size: 25rpx;
+}
+.input image{
+  height: 38rpx;
+  width: 38rpx;
+  position: absolute;
+  right: 79rpx;
+  z-index: 2;
+}
+.input image:active{
+  transform: scale(0.95)
+}
+.selects{
+  display: flex;
+  margin-top: 28rpx;
+}
+.selects-place{
+  width: 25%;
+}
+.selects-count{
+  width: 36%;
+  margin: 0 2%;
+}
+.selects-time{
+  width: 35%;
+}
+.body{
+  box-sizing: border-box;
+  height: 100%;
+  padding: 393rpx 0 111rpx 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.subject{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 90rpx;
+  margin-bottom: 76rpx;
+  position: relative;
+}
+.subject-name-count{
+  display: flex;
+  align-items: center;
+}
+.subject-name{
+  font-size: 28rpx;
+}
+.subject-count{
+  font-size: 22rpx;
+  color: #FFA07A;
+}
+/* .inf-time,.inf-place{
+  font-size: 22rpx;
+  margin-left: 55rpx;
+  margin-top: 18rpx;
+} */
+.subject-time,.subject-place{
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  margin-top: 30rpx;
+}
+.subject-time image,.subject-place image{
+  height: 28rpx;
+  width: 28rpx;
+  margin-right: 10rpx;
+}
+.subject-time{
+  color: #ff7c3b;
+}
+.subject-place{
+  color: #5bb8f3;
+}
+.subject-button{
+  width: 170rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 5rpx;
+  position: absolute;
+  right: 90rpx;
+  bottom: 0;
+  text-align: center;
+  font-size: 22rpx;
+  color: white;
+}
+.subject-no-selected{
+  background: #5bb8f3;
+}
+.subject-selected{
+  background: #bfbfbf;
+}
+bottom-navigation{
+  height: 111rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}

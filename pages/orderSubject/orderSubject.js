@@ -88,9 +88,10 @@ Page({
       ]
     ]
   },
-  splitArr(str){
-    let arr = str.split('-');
-    return arr;
+  goSelectExperimental(){
+    wx.navigateTo({
+      url: '../selectExperimental/selectExperimental',
+    })
   },
 
   /**

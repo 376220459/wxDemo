@@ -9,6 +9,24 @@ Page({
     currentWeek: 6,
     hiddenWeekList: true,
     weekListPoint: 'http://i2.tiimg.com/684412/e854ac75dd2fe588.png',
+    iconArr: [
+      {
+        img: 'http://i1.fuimg.com/684412/11981800d4a994ed.png',
+        color: '#5bb8f3'
+      },
+      {
+        img: 'http://i1.fuimg.com/684412/a77f0628f1da6616.png',
+        color: ''
+      },
+      {
+        img: 'http://i1.fuimg.com/684412/5ca02d63eb91e4a2.png',
+        color: ''
+      },
+      {
+        img: 'http://i1.fuimg.com/684412/98f2506428a6140a.png',
+        color: ''
+      }
+    ],
     classes: [
       {
         img: 'http://i1.fuimg.com/684412/507594339af35479.png',
@@ -31,26 +49,9 @@ Page({
         time: '18:10-19:50',
         place: '西区 b122'
       }
-    ],
-    iconArr: [
-      {
-        img: 'http://i1.fuimg.com/684412/11981800d4a994ed.png',
-        color: '#5bb8f3'
-      },
-      {
-        img: 'http://i1.fuimg.com/684412/a77f0628f1da6616.png',
-        color: ''
-      },
-      {
-        img: 'http://i1.fuimg.com/684412/5ca02d63eb91e4a2.png',
-        color: ''
-      },
-      {
-        img: 'http://i1.fuimg.com/684412/98f2506428a6140a.png',
-        color: ''
-      }
     ]
   },
+    
   changeWeekList() {
     if (this.data.hiddenWeekList == true) {
       this.setData({

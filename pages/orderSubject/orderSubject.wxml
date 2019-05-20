@@ -23,8 +23,8 @@
       </view>
     </view>
     <view class='select-buttons'>
-      <view class='experimental-button'>实验选课</view>
-      <view class='study-button'>自习预约</view>
+      <view class='experimental-button' bindtap='goSelectExperimental'>实验选课</view>
+      <view class='study-button' bindtap='goSelectExperimental'>自习预约</view>
     </view>
   </scroll-view>
   <bottom-navigation iconArr='{{iconArr}}'></bottom-navigation>

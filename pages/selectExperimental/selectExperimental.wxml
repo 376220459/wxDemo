@@ -1,0 +1,36 @@
+<view class='container'>
+  <view class='top'>
+  <image src='http://i2.tiimg.com/684412/fef8b025c0d453ab.png' bindtap='goBack'></image>
+    <rich-text>实验选课</rich-text>
+  </view>
+  <view class='search'>
+    <view class='input'>
+      <input placeholder='{{ placeholder }}'></input>
+      <image src='http://i2.tiimg.com/684412/24d8d8e31165d119.png'></image>
+    </view>
+    <view class='selects'>
+      <select class='selects-place' dataArr='{{ placeArr }}' data='{{ placeArr[0] }}'></select>
+      <select class='selects-count' dataArr='{{ countArr }}' data='{{ countArr[0] }}'></select>
+      <select class='selects-time' dataArr='{{ timeArr }}' data='{{ timeArr[0] }}'></select>
+    </view>
+  </view>
+  <scroll-view class='body' scroll-y='true'>
+    <view class='subject' wx:for='{{ subjects }}' wx:key='{{ index }}'>
+      <view class='subject-name-count'>
+        <rich-text class='subject-name'>{{ item.name }}</rich-text>
+        <rich-text class='subject-count'>（{{ item.count }}人）</rich-text>
+      </view>
+      <view class='subject-time'>
+        <image src='http://i1.fuimg.com/684412/ec219b15ebdf2660.png'></image>
+        <rich-text>{{ item.time }}</rich-text>
+      </view>
+      <view class='subject-place'>
+        <image src='http://i1.fuimg.com/684412/b7b17bf1c3ac0e21.png'></image>
+        <rich-text>{{ item.place }}</rich-text>
+      </view>
+      <view wx:if='{{ !item.selected }}' class='subject-button subject-no-selected' bindtap='slectSubject' data-index='{{ index }}'>立即选课</view>
+      <view wx:if='{{ item.selected }}' class='subject-button subject-selected' bindtap='slectSubject' data-index='{{ index }}'>取消选课</view>
+    </view>
+  </scroll-view>
+  <bottom-navigation iconArr='{{iconArr}}'></bottom-navigation>
+</view>

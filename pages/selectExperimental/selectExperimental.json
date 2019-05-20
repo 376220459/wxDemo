@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bottom-navigation": "../bottomNavigation/bottomNavigation",
+    "select": "../select/select"
+  }
+}
