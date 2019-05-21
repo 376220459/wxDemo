@@ -4,8 +4,8 @@
     </view>
     <rich-text class='register-tip'>还没有账号，立即 <navigator class='register-navigator' url='../register/register'>注册</navigator></rich-text>
     <form class='input-container'>
-      <input placeholder='请输入您的学号' focus='true' value='{{ stuId }}'></input>
-      <input placeholder='请输入您的密码' password='true' class='input-password'></input>
+      <input placeholder='请输入您的学号' focus='true' value='{{ stuId }}' bindinput='bindData' data-key='stuId'></input>
+      <input placeholder='请输入您的密码' password='true' class='input-password' value='{{ password }}' bindinput='bindData' data-key='password'></input>
     </form>
     <view class='button-container'>
       <button class='button-login' bindtap='login'>登陆</button>

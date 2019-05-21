@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/register/register",
-    "pages/start/start",
     "pages/login/login",
+    "pages/start/start",
+    "pages/register/register",
     "pages/subjects/subjects",
     "pages/orderSubject/orderSubject",
     "pages/selectExperimental/selectExperimental",

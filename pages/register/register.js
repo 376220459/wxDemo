@@ -57,9 +57,12 @@ Page({
     // },1000)
   },
   sendCode(){
+    wx.showLoading({
+      title: '正在发送...',
+    })
     let that = this;
     wx.request({
-      url: 'http://192.168.43.166:8080/user/getVerifyCode', //仅为示例，并非真实的接口地址
+      url: 'http://192.168.43.166:8080/user/getVerifyCode',
       data: {
         phoneNumber: that.data.phone
       },
@@ -69,6 +72,7 @@ Page({
       },
       method: 'POST',
       success: function (res) {
+        wx.hideLoading();
         console.log(res.data);
         if (res.data.status == 1) {
           that.setData({
@@ -84,6 +88,7 @@ Page({
         }
       },
       fail() {
+        wx.hideLoading();
         console.log('发送失败，请稍后再试！');
         wx.showToast({
           title: '发送失败，请稍后再试！',
@@ -100,7 +105,7 @@ Page({
       })
     }else if(!/^\d{6,12}$/.test(this.data.stuId)){
       wx.showToast({
-        title: '请输入您的真实学号',
+        title: '请输入正确的学号',
         icon: 'none'
       })
     }else if (!/^1[34578]\d{9}$/.test(this.data.phone)) {
@@ -123,18 +128,10 @@ Page({
         title: '两次输入密码不一致哦~',
         icon: 'none'
       })
-    }else{
-      // console.log('注册成功。');
-      // wx.showLoading({
-      //   title: '注册成功...'
-      // });
-      // setTimeout(() => {
-      //   wx.hideLoading();
-      //   wx.reLaunch({
-      //     url: '../login/login?stuId=' + this.data.stuId
-      //   })
-      // }, 1000)
-      // return;
+    } else {
+      wx.showLoading({
+        title: '正在注册...',
+      })
       let that = this;
       wx.request({
         url: 'http://192.168.43.166:8080/user/register', // 仅为示例，并非真实的接口地址
@@ -162,15 +159,31 @@ Page({
                 url: '../login/login?stuId=' + that.data.stuId
               })
             },1000)
-          }else{
-            console.log('注册失败，请稍后再试！');
-            wx.showToast({
-              title: '注册失败，请稍后再试！',
-              icon: 'none'
-            })
+          } else {
+            wx.hideLoading();
+            if (res.data.message === '手机号已经被注册') {
+              console.log('手机号已经被注册！');
+              wx.showToast({
+                title: '手机号已经被注册！',
+                icon: 'none'
+              })
+            } else if (res.data.message === '学号已经被注册') {
+              console.log('学号已经被注册！');
+              wx.showToast({
+                title: '学号已经被注册！',
+                icon: 'none'
+              })
+            }else{
+              console.log('注册失败，请稍后再试！');
+              wx.showToast({
+                title: '注册失败，请稍后再试！',
+                icon: 'none'
+              })
+            }
           }
         },
-        fail(){
+        fail() {
+          wx.hideLoading();
           console.log('注册失败，请稍后再试！');
           wx.showToast({
             title: '注册失败，请稍后再试！',
