@@ -55,6 +55,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  font-size: 30rpx;
 }
 .obout-us icon{
   font-size: 1.1em;
@@ -102,7 +103,7 @@
 }
 @keyframes pullButtonContain{
   from{height: 30%;background: rgba(255,255,255,0.7);}
-  to{height: 50%;background: rgba(255,255,255,0.8);}
+  to{height: 40%;background: rgba(255,255,255,0.8);}
 }
 @keyframes showAbout{
   from{opacity: 0}

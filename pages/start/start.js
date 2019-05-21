@@ -46,7 +46,7 @@ Page({
 
   closeAbout(){
     this.setData({
-      buttonContaiStyle: 'opacity: 1;bottom: 30%;height: 50%;background: rgba(255,255,255,0.8);animation: hiddenContain 0.5s linear forwards'
+      buttonContaiStyle: 'opacity: 1;bottom: 30%;height: 40%;background: rgba(255,255,255,0.8);animation: hiddenContain 0.5s linear forwards'
     })
     setTimeout(()=>{
       this.setData({

@@ -62,7 +62,7 @@ Page({
     })
     let that = this;
     wx.request({
-      url: 'http://192.168.43.166:8080/user/getVerifyCode',
+      url: 'http://39.96.23.138/user/getVerifyCode',
       data: {
         phoneNumber: that.data.phone
       },
@@ -134,7 +134,7 @@ Page({
       })
       let that = this;
       wx.request({
-        url: 'http://192.168.43.166:8080/user/register', // 仅为示例，并非真实的接口地址
+        url: 'http://39.96.23.138/user/register', // 仅为示例，并非真实的接口地址
         data: {
           stuName: this.data.stuName,
           stuId: this.data.stuId,
