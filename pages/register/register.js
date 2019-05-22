@@ -62,7 +62,7 @@ Page({
     })
     let that = this;
     wx.request({
-      url: 'http://39.96.23.138/user/getVerifyCode',
+      url: 'http://39.96.23.138:8081/user/getVerifyCode',
       data: {
         phoneNumber: that.data.phone
       },
@@ -118,7 +118,7 @@ Page({
         title: '请输入正确的验证码',
         icon: 'none'
       })
-    } else if (!(/^[\d.+-]*[a-zA-Z]+$/.test(this.data.password) && this.data.password.length >= 6 && this.data.password.length <= 16)) {
+    } else if (!(/^[a-zA-Z0-9.+-]*[a-zA-Z][a-zA-Z0-9.+-]*$/.test(this.data.password) && this.data.password.length >= 6 && this.data.password.length <= 16)) {
       wx.showToast({
         title: '请输入符合要求的密码',
         icon: 'none'
@@ -134,7 +134,7 @@ Page({
       })
       let that = this;
       wx.request({
-        url: 'http://39.96.23.138/user/register', // 仅为示例，并非真实的接口地址
+        url: 'http://39.96.23.138:8081/user/register', // 仅为示例，并非真实的接口地址
         data: {
           stuName: this.data.stuName,
           stuId: this.data.stuId,

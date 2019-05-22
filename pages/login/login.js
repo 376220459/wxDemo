@@ -31,7 +31,7 @@ Page({
         title: '正在登录...'
       })
       wx.request({
-        url: 'http://39.96.23.138/user/login',
+        url: 'http://39.96.23.138:8081/user/login',
         data: {
           stuId: this.data.stuId,
           password: this.data.password
@@ -110,7 +110,7 @@ Page({
         if (res.code) {
           // 发起网络请求
           wx.request({
-            url: 'http://39.96.23.138/user/wxLogin',
+            url: 'http://39.96.23.138:8081/user/wxLogin',
             data: {
               js_code: res.code
             },

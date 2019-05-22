@@ -246,7 +246,7 @@ Page({
         wx.hideLoading();
         wx.showToast({
           title: '定位失败',
-          icon: 'fail'
+          icon: 'none'
         })
       }
     })
