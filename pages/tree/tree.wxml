@@ -1,0 +1,10 @@
+<view class='whole'>
+  <view class='title' bindtap='change'>
+    <image wx:if='{{ !showList }}' src='http://i1.fuimg.com/684412/f434b3e81d794962.png'></image>
+    <image wx:else src='http://i1.fuimg.com/684412/9efd06bb16186f19.png'></image>
+    <rich-text>{{ title }}</rich-text>
+  </view>
+  <view wx:if='{{ !showList }}' class='list'>
+    <view wx:for='{{ dataArr }}' wx:key='{{ index }}'>{{ item }}</view>
+  </view>
+</view>

@@ -7,10 +7,10 @@
       <view class='obout-us' style='{{ aboutUsStyle }}'>
         <icon bindtap='closeAbout'>返回</icon>
         <rich-text style='font-weight:bold;font-size:1.5em;margin-top:50rpx'>关于我们</rich-text>
-        <rich-text>负责人：邹闰闰</rich-text>
-        <rich-text>技术：×××</rich-text>
-        <rich-text>其他：×××</rich-text>
-        <rich-text>联系我们：376220459@qq.com</rich-text>
+        <rich-text>西安博云科物联智能科技有限公司</rich-text>
+        <rich-text>邹闰闰：13649250220</rich-text>
+        <rich-text>胡伟：18338275606</rich-text>
+        <rich-text>联系我们：zrr612815@163.com</rich-text>
         <rich-text style='color:gray;font-size:0.6em;'>西安邮电大学 2019.04</rich-text>
       </view>
     </view>

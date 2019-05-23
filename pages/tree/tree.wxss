@@ -1,0 +1,26 @@
+.whole{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35rpx;
+}
+.title{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+.title image{
+  width: 26rpx;
+  height: 26rpx;
+}
+.list{
+  font-size: 20rpx;
+  margin-top: 35rpx;
+}
+.list view{
+  box-sizing: border-box;
+  height: 65rpx;
+  line-height: 65rpx;
+  /* background: #5bb9f3b0; */
+  padding-left: 35rpx;
+}

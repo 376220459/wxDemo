@@ -1,0 +1,42 @@
+<view class='container'>
+  <view class='slider-right' style='left: {{ sliderRightLeft }}'>
+    <view class='top'>
+      <image src='http://i2.tiimg.com/684412/7b93c2841bb6d54d.png' bindtap='slide' id='slider'></image>
+      <rich-text>器材借用</rich-text>
+    </view>
+    <view scroll-y='true' class='main' bindtap='slideLeft'>
+      <view class='main-top'>
+        <view class='input'>
+          <input placeholder='输入器材名称'></input>
+          <image src='http://i2.tiimg.com/684412/24d8d8e31165d119.png'></image>
+        </view>
+        <view class='equipment-keys'>
+          <view class='equipment-key' wx:for='{{ equipmentKeys }}' wx:key='{{ idnex }}' bindtap='selectKey' style='color: {{ item.color }};border-color: {{ item.color }}' data-index='{{ index }}'>{{ item.key }}</view>
+        </view>
+      </view>
+      <scroll-view class='main-content' scroll-y='true'>
+        <view class='equipment' wx:for='{{ equipments }}' wx:key='{{ index }}'>
+          <image src='{{ item.img }}'></image>
+          <view class='equipment-inf'>
+            <rich-text>器材名称：{{ item.name }}</rich-text>
+            <rich-text>剩余：{{ item.count }}</rich-text>
+            <rich-text wx:if='{{ item.tip }}' style='color: #5bb8f3'>可借用</rich-text>
+            <rich-text wx:else style='color: #c7c7c7'>不在本课适用范围内</rich-text>
+            <view class='counter'>
+              <view class='button-counter' data-mark='-' data-index='{{ index }}' bindtap='changeSelectedCount'>－</view>
+              <view class='selected-count'>{{ item.selectedCount }}</view>
+              <view class='button-counter' data-mark='+' data-index='{{ index }}' bindtap='changeSelectedCount'>＋</view>
+            </view>
+            <view wx:if='{{ !item.borrowed }}' class='button-borrow' data-index='{{ index }}' bindtap='borrow'>立即借用</view>
+            <view wx:else class='button-borrowed' style='background: #c7c7c7'>成功借用</view>
+          </view>
+        </view>
+        <view class='bottom-tip'>————— 到底啦 —————</view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='slider-left' style='left: {{ sliderLeftLeft }}'>
+    <tree wx:for='{{ laboratorys }}' wx:key='index' title='{{ item.title }}' dataArr='{{ item.children }}'></tree>
+  </view>
+  <bottom-navigation iconArr='{{iconArr}}'></bottom-navigation>
+</view>

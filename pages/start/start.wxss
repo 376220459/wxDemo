@@ -18,14 +18,14 @@
 @keyframes jeepText{
   0%{font-size: 0rpx;top: 0;left: 0rpx;}
   40%{font-size: 80rpx;top: 30%;left: 0rpx;}
-  65%{font-size: 50rpx;top: 50rpx;left: 0rpx;}
-  70%{font-size: 50rpx;top: 50rpx;left: -30rpx;}
-  75%{font-size: 50rpx;top: 50rpx;left: 30rpx;}
-  80%{font-size: 50rpx;top: 50rpx;left: -30rpx;}
-  85%{font-size: 50rpx;top: 50rpx;left: 30rpx;}
-  90%{font-size: 50rpx;top: 50rpx;left: -30rpx;}
-  95%{font-size: 50rpx;top: 50rpx;left: 30rpx;}
-  100%{font-size: 50rpx;top: 50rpx;left: 0;}
+  65%{font-size: 50rpx;top: 150rpx;left: 0rpx;}
+  70%{font-size: 50rpx;top: 150rpx;left: -30rpx;}
+  75%{font-size: 50rpx;top: 150rpx;left: 30rpx;}
+  80%{font-size: 50rpx;top: 150rpx;left: -30rpx;}
+  85%{font-size: 50rpx;top: 150rpx;left: 30rpx;}
+  90%{font-size: 50rpx;top: 150rpx;left: -30rpx;}
+  95%{font-size: 50rpx;top: 150rpx;left: 30rpx;}
+  100%{font-size: 50rpx;top: 150rpx;left: 0;}
 }
 .button-contain{
   /* display: none; */

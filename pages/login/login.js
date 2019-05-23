@@ -21,7 +21,7 @@ Page({
         title: '请输入正确的学号',
         icon: 'none'
       })
-    } else if (!(/^[\d.+-]*[a-zA-Z]+$/.test(this.data.password) && this.data.password.length >= 6 && this.data.password.length <= 16)) {
+    } else if (!(/^[a-zA-Z0-9.+-]*[a-zA-Z][a-zA-Z0-9.+-]*$/.test(this.data.password) && this.data.password.length >= 6 && this.data.password.length <= 16)) {
       wx.showToast({
         title: '请输入符合要求的密码',
         icon: 'none'
