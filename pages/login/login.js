@@ -31,7 +31,7 @@ Page({
         title: '正在登录...'
       })
       wx.request({
-        url: 'http://39.96.23.138:8081/user/login',
+        url: 'https://www.ezshiyan.com/user/login',
         data: {
           stuId: this.data.stuId,
           password: this.data.password
@@ -110,13 +110,13 @@ Page({
         if (res.code) {
           // 发起网络请求
           wx.request({
-            url: 'http://39.96.23.138:8081/user/wxLogin',
+            url: 'https://www.ezshiyan.com/user/wxLogin',
             data: {
               js_code: res.code
             },
             header: {
-              // 'content-type': 'application/json' // 默认值
-              'content-type': 'application/x-www-form-urlencoded' // 默认值
+              'content-type': 'application/json' // 默认值
+              // 'content-type': 'application/x-www-form-urlencoded' // 默认值
             },
             method: 'POST',
             success: function (res) {

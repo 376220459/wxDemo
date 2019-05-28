@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/equipment/equipment",
     "pages/start/start",
     "pages/login/login",
     "pages/register/register",
@@ -9,6 +8,7 @@
     "pages/selectExperimental/selectExperimental",
     "pages/experimental/experimental",
     "pages/addStep/addStep",
+    "pages/equipment/equipment",
     "pages/index/index",
     "pages/logs/logs"
   ],

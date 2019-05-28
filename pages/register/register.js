@@ -62,13 +62,13 @@ Page({
     })
     let that = this;
     wx.request({
-      url: 'http://39.96.23.138:8081/user/getVerifyCode',
+      url: 'https://www.ezshiyan.com/user/getVerifyCode',
       data: {
         phoneNumber: that.data.phone
       },
       header: {
-        // 'content-type': 'application/json' // 默认值
-        'content-type': 'application/x-www-form-urlencoded' // 默认值
+        'content-type': 'application/json' // 默认值
+        // 'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       method: 'POST',
       success: function (res) {
@@ -134,7 +134,7 @@ Page({
       })
       let that = this;
       wx.request({
-        url: 'http://39.96.23.138:8081/user/register', // 仅为示例，并非真实的接口地址
+        url: 'https://www.ezshiyan.com/user/register', // 仅为示例，并非真实的接口地址
         data: {
           stuName: this.data.stuName,
           stuId: this.data.stuId,
